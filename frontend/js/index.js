@@ -3,7 +3,7 @@ const optionsdate = {weekday: "long", year: "numeric", month: "long", day: "nume
 const todayDate = new Date().toLocaleDateString(`en-AU`, optionsdate)
 today.innerHTML = `Today is ${todayDate}`;
 
-const url = `http://localhost:3001/todos`
+const url = `https://fullstacktodoappbackend.vercel.app/todos`
 async function getTodos() {
     try{
 
@@ -85,7 +85,7 @@ async function postHandler() {
 }
 
 async function deleteItem(id) {
-    const url = `http://www.localhost:3001/todos/${id}`
+    const url = `https://fullstacktodoappbackend.vercel.app/todos/${id}`
 
     try {
         const option = {
@@ -106,7 +106,7 @@ async function deleteItem(id) {
 async function updateItem(itemToUp) {
     const {_id, text} = itemToUp
     isUpdating = true;
-    const updateURL = `http://www.localhost:3001/todos/${_id}`
+    const updateURL = `https://fullstacktodoappbackend.vercel.app/todos/${_id}`
     input.value = text;
     newitem = itemToUp;
 
