@@ -55,12 +55,12 @@ input.addEventListener("change", function(event){
     todo = event.target.value
 })
 const addButton = document.querySelector(`.submit-btn`)
-addButton.addEventListener("click", function(){
+addButton.addEventListener("click", async function(){
     if (!isUpdating) {
         postHandler();
     } else {
         updateItem(newitem)
-        window.location.href = "/"
+        await function(){window.location.href = "/"}
     }
 })
 async function postHandler() {
