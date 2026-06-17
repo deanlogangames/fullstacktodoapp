@@ -75,7 +75,7 @@ async function postHandler() {
         const response = await fetch(url, options)
         if (response.ok) {
             console.log("Sucessful")
-            window.location.href = "/frontend/index.html"
+            window.location.href = "/"
         } else {
             console.log("Unsucessful")
         }
@@ -94,7 +94,7 @@ async function deleteItem(id) {
         const ItemToBeDeleted = await fetch(url, option);
         if (ItemToBeDeleted.ok) {
             console.log("Sucessful")
-            window.location.href = "/frontend/index.html"
+            window.location.href = "/"
         } else {
             console.log("Unsucessful")
         }
