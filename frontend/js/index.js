@@ -60,6 +60,7 @@ addButton.addEventListener("click", function(){
         postHandler();
     } else {
         updateItem(newitem)
+        window.location.href = "/"
     }
 })
 async function postHandler() {
