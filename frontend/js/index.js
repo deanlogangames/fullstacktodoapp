@@ -58,6 +58,12 @@ const addButton = document.querySelector(`.submit-btn`)
 addButton.addEventListener("click", function(){
     if (!isUpdating) {
         postHandler();
+        const response = await fetch(updateURL, option);
+        if (response.ok) {
+            console.log("Sucessful")
+        } else {
+            console.log("Unsucessful")
+        }
     } else {
         updateItem(newitem)
         window.location.href = "/"
@@ -118,12 +124,6 @@ async function updateItem(itemToUp) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({text: todo})
-        }
-        const response = await fetch(updateURL, option);
-        if (response.ok) {
-            console.log("Sucessful")
-        } else {
-            console.log("Unsucessful")
         }
     } catch (err) {
         console.log(err)
