@@ -55,7 +55,7 @@ input.addEventListener("change", function(event){
     todo = event.target.value
 })
 const addButton = document.querySelector(`.submit-btn`)
-addButton.addEventListener("click", function(){
+addButton.addEventListener("click", async function(){
     if (!isUpdating) {
         postHandler();
         const response = await fetch(updateURL, option);
