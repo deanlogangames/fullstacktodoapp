@@ -57,7 +57,7 @@ input.addEventListener("input", function(event){
 const addButton = document.querySelector(`.submit-btn`)
 addButton.addEventListener("click", async function(){
     if (!isUpdating) {
-        postHandler();
+        await postHandler();
         const response = await fetch(updateURL, option);
         if (response.ok) {
             console.log("Sucessful")
@@ -65,7 +65,7 @@ addButton.addEventListener("click", async function(){
             console.log("Unsucessful")
         }
     } else {
-        updateItem(newitem)
+        await updateItem(newitem)
         window.location.href = "/"
     }
 })
