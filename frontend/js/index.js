@@ -50,7 +50,7 @@ let isUpdating = false
 
 let todo;
 const input = document.querySelector(".new-task")
-input.addEventListener("change", function(event){
+input.addEventListener("input", function(event){
     event.preventDefault();
     todo = event.target.value
 })
