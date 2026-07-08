@@ -66,6 +66,7 @@ addButton.addEventListener("click", async function(){
         }
     } else {
         await updateItem(newitem)
+        window.location.href = "/"
     }
 })
 async function postHandler() {
@@ -124,6 +125,7 @@ async function updateItem(itemToUp) {
             },
             body: JSON.stringify({text: todo})
         }
+        await fetch(updateURL, option);
     } catch (err) {
         console.log(err)
     }
